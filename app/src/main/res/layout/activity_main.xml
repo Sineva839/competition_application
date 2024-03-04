@@ -4,76 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/arimo"
-        android:text="-Последний посещенный курс-"
-        android:textSize="23dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_home"
-        app:layout_constraintVertical_bias="0.241" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
+        android:backgroundTint="#323030"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
         app:layout_constraintVertical_bias="0.0"
-        app:navigationIcon="@color/material_dynamic_neutral0"
+        app:navigationIcon="@drawable/ic_launcher_foreground"
         app:subtitle="application for your convenience"
+        app:subtitleTextColor="@color/white"
         app:title="IT_Helper"
+        app:titleTextColor="@color/white"
         tools:layout_editor_absoluteX="0dp" />
 
-    <Button
-        android:id="@+id/button_free"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="56dp"
-        android:fontFamily="@font/arimo"
-        android:text="Бесплатные курсы"
-        android:textSize="23dp"
+    <TextView
+        android:id="@+id/text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--- Python courses ---"
+        android:textColor="@color/white"
+        android:textSize="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainToolBar" />
+        app:layout_constraintTop_toBottomOf="@+id/mainToolBar"
+        app:layout_constraintVertical_bias="0.102" />
 
-    <Button
-        android:id="@+id/button_paid"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/arimo"
-        android:text="Платные курсы"
-        android:textSize="23dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_list_1"
+        android:layout_width="350dp"
+        android:layout_height="550dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_free" />
-
-    <Button
-        android:id="@+id/button_home"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/arimo"
-        android:text="Личный кабинет"
-        android:textSize="23dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.445"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_paid" />
+        app:layout_constraintTop_toBottomOf="@+id/text_1"
+        app:layout_constraintVertical_bias="0.095" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
