@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         val accessOpen: Boolean = true
         val accessOpen2: Boolean = false
 
+        // Курсы
         items.add(ItemCls(1,1,"Junior course","Начало курса","большое описание",30,0,"simple_pit",accessOpen))
         items.add(ItemCls(1,2,"Junior course","Изучение основ","большое описание",20,0,"simple_pit",accessOpen))
         items.add(ItemCls(1,3,"Junior course","Практика на деле","большое описание",70,0,"simple_pit",accessOpen))
