@@ -1,22 +1,26 @@
 package com.example.competition_application
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class ItemAdapter(var items: List<ItemCls>, var context: Context):
     RecyclerView.Adapter<ItemAdapter.MyViewHolder>() {
 
     class MyViewHolder(view: View): RecyclerView.ViewHolder(view){
-        val image: ImageView = view.findViewById(R.id.imageView)
-        val title: TextView = view.findViewById(R.id.title_item)
-        val desk: TextView = view.findViewById(R.id.description)
-        val progressBar: ProgressBar = view.findViewById(R.id.progress_item)
+        var image: ImageView = view.findViewById(R.id.imageView)
+        var title: TextView = view.findViewById(R.id.title_item)
+        var mainLiner: LinearLayout = view.findViewById(R.id.main_liner)
+        var desk: TextView = view.findViewById(R.id.description)
+        var progressBar: ProgressBar = view.findViewById(R.id.progress_item)
 
     }
 
@@ -33,6 +37,23 @@ class ItemAdapter(var items: List<ItemCls>, var context: Context):
         holder.title.text = items[position].title
         holder.desk.text = items[position].desk
         holder.progressBar.progress = items[position].progress
+        holder.mainLiner.alpha = 0.5F
+        if (items[position].access_valid) {
+            holder.mainLiner.alpha = 1F
+        }
+
+        holder.mainLiner.setOnClickListener(){
+            //Toast.makeText(context,holder.desk.text.toString(),Toast.LENGTH_SHORT).show()
+            val intent = Intent(context,MainActivity::class.java)
+            context.startActivity(intent)
+        }
+
+        var imageId = context.resources.getIdentifier(
+            items[position].icos,
+            "drawable",
+            context.packageName
+        )
+        holder.image.setImageResource(imageId)
 
     }
 }

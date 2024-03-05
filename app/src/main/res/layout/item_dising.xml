@@ -2,14 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_liner"
     android:layout_width="match_parent"
     android:layout_height="130dp"
+    android:layout_marginBottom="15dp"
+    android:alpha="1"
+    android:background="@drawable/custom_background_0"
     android:paddingHorizontal="20dp"
     android:paddingVertical="10dp"
-    android:layout_marginBottom="15dp"
-    android:background="@drawable/custom_background_0"
     tools:context=".MainActivity">
-
 
 
     <ImageView
@@ -43,16 +44,16 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/arimo"
             android:text="TextView"
-            android:textSize="20dp"
-            android:textColor="#cdbea7" />
+            android:textColor="#cdbea7"
+            android:textSize="20dp" />
 
         <ProgressBar
             android:id="@+id/progress_item"
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:progress="0"
             android:layout_marginRight="20dp"
+            android:progress="0"
             android:progressTint="#c29545"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
