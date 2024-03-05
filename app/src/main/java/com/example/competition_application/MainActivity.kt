@@ -19,10 +19,12 @@ class MainActivity : AppCompatActivity() {
         val items = arrayListOf<ItemCls>()
 
         items.add(ItemCls(1,"Junior course","Курс с нуля до джуна","большое описание",0))
-        items.add(ItemCls(1,"Midle course","Курс с джуна до мидла","большое описание",200))
-        items.add(ItemCls(1,"Senior course","Курс до сеньера + больше скидок","большое описание",500))
+        items.add(ItemCls(2,"Midle course","Курс с джуна до мидла","большое описание",24))
+        items.add(ItemCls(3,"Senior course","Курс до сеньера + больше скидок","большое описание",80))
+        items.add(ItemCls(4,"Senior course2","Курс до сеньера + больше скидок","большое описание",100))
+        items.add(ItemCls(5,"Senior course3","Курс до сеньера + больше скидок","большое описание",10))
 
-        itemList.layoutManager = ConstraintLayout()
+        itemList.layoutManager = LinearLayoutManager(this)
         itemList.adapter = ItemAdapter(items,this)
 
     }
