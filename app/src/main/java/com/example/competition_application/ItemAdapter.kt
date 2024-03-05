@@ -42,18 +42,23 @@ class ItemAdapter(var items: List<ItemCls>, var context: Context):
             holder.mainLiner.alpha = 1F
         }
 
-        holder.mainLiner.setOnClickListener(){
-            //Toast.makeText(context,holder.desk.text.toString(),Toast.LENGTH_SHORT).show()
-            val intent = Intent(context,MainActivity::class.java)
-            context.startActivity(intent)
-        }
-
         var imageId = context.resources.getIdentifier(
             items[position].icos,
             "drawable",
             context.packageName
         )
         holder.image.setImageResource(imageId)
+
+        holder.mainLiner.setOnClickListener(){
+            //Toast.makeText(context,holder.desk.text.toString(),Toast.LENGTH_SHORT).show()
+            val intent = Intent(context,OpenScreen::class.java)
+
+            intent.putExtra("description_item",items[position].mainDesk)
+            intent.putExtra("title_item",items[position].title)
+            intent.putExtra("img_item",items[position].icos)
+
+            context.startActivity(intent)
+        }
 
     }
 }
