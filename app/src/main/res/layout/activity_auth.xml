@@ -4,30 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#cdbea7"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:textSize="60dp"
-        android:layout_marginTop="10dp"
-        android:textAlignment="center"
-        android:textColor="#cdbea7"
+
+    <ImageView
+        android:id="@+id/zmei"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:alpha="1"
-        android:text="Регистрация" />
+        android:layout_height="200dp"
+        android:src="@drawable/koronka_pit" />
 
     <TextView
         android:id="@+id/textView3"
         android:textSize="28dp"
         android:layout_marginTop="50dp"
         android:textAlignment="center"
-        android:textColor="#cdbea7"
+        android:textColor="#323030"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:alpha="0.7"
+        android:alpha="1"
         android:text="---------------Логин---------------" />
 
     <EditText
@@ -37,21 +33,21 @@
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
         android:text=""
-        android:textColor="#c29545"
+        android:textColor="#323030"
         android:textSize="23dp"
         android:ems="10"
         android:hint="Введите логин"
-        android:textColorHint="#cdbea7"
+        android:textColorHint="#323030"
         android:inputType="text" />
 
     <TextView
         android:id="@+id/textView2"
         android:textSize="28dp"
         android:textAlignment="center"
-        android:textColor="#cdbea7"
+        android:textColor="#323030"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:alpha="0.7"
+        android:alpha="1"
         android:text="---------------Парроль---------------"  />
 
     <EditText
@@ -61,11 +57,11 @@
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
         android:text=""
-        android:textColor="#c29545"
+        android:textColor="#323030"
         android:textSize="23dp"
         android:ems="10"
         android:hint="Введите парроль"
-        android:textColorHint="#cdbea7"
+        android:textColorHint="#323030"
         android:inputType="numberPassword" />
 
     <Button
@@ -74,6 +70,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="40dp"
         android:textSize="27dp"
+        android:textColor="#cdbea7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Войти в приложение" />

@@ -4,6 +4,8 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.widget.TableLayout
+import android.widget.Toast
 
 class DBHELPER(val context: Context, val factory: SQLiteDatabase.CursorFactory?) :
     SQLiteOpenHelper(context,"appdata",factory,1){
@@ -23,7 +25,11 @@ class DBHELPER(val context: Context, val factory: SQLiteDatabase.CursorFactory?)
         values.put("course",user.courses)
 
         val db = this.writableDatabase
-        db.insert("users",null,values)
+        db.insert("user",null,values)
+        db.close()
+
     }
+
+
 
 }

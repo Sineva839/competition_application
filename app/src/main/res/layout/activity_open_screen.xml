@@ -1,93 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#323030"
+    android:orientation="vertical"
     tools:context=".MainActivity">
-
-
-    <ImageView
-        android:id="@+id/background_view"
-        android:layout_width="410dp"
-        android:layout_height="662dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/simple_pit"
-        android:alpha="0.15"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainToolBar" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
-        android:backgroundTint="#323030"
-        android:minHeight="?attr/actionBarSize"
+        android:backgroundTint="#cdbea7"
         android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:navigationIcon="@drawable/ic_launcher_foreground"
         app:subtitle="application for your convenience"
-        app:subtitleTextColor="@color/white"
+        app:subtitleTextColor="#323030"
         app:title="IT_Helper"
-        app:titleTextColor="@color/white"
-        tools:layout_editor_absoluteX="0dp" />
+        app:titleTextColor="#323030"/>
+
 
     <TextView
         android:id="@+id/main_title"
-        android:layout_width="wrap_content"
+        android:textSize="40dp"
+        android:textColor="#cdbea7"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:text="Название части курса!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainToolBar"
-        app:layout_constraintVertical_bias="0.038" />
+        android:text="TextView" />
 
     <TextView
-        android:id="@+id/main_deskription"
-        android:layout_width="wrap_content"
+        android:id="@+id/main_description"
+        android:textSize="20dp"
+        android:textColor="#cdbea7"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="364dp"
-        android:text="Описание какого либо курса , в зависимости от того , вкусно ли он приготовлен на пару. Думаете я просто так написал тут несурозицу? А вот и не правда, я просто тестирую текст и наливаю воду в презентацию."
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_title" />
+        android:layout_marginVertical="20dp"
+        android:text="TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView" />
 
     <VideoView
-        android:id="@+id/video_view"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:id="@+id/video_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#cdbea7"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="44dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_deskription"
-        app:layout_constraintVertical_bias="0.315" />
+        android:layout_marginVertical="10dp"
+        android:layout_weight="1" />
 
     <Button
         android:id="@+id/start_test"
-        android:layout_width="wrap_content"
+        android:backgroundTint="#cdbea7"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#323030"
+        android:textSize="40dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#323030"
-        android:text="Начать тест"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/video_view"
-        app:layout_constraintVertical_bias="0.217" />
+        android:text="Начать тест" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

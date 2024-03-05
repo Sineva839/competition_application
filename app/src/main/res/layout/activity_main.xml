@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#cdbea7"
     tools:context=".MainActivity">
 
 
@@ -20,35 +20,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:navigationIcon="@drawable/ic_launcher_foreground"
-        app:subtitle="application for your convenience"
+        app:subtitle="Курсы по программированию"
         app:subtitleTextColor="@color/white"
         app:title="IT_Helper"
         app:titleTextColor="@color/white"
         tools:layout_editor_absoluteX="0dp" />
 
-    <TextView
-        android:id="@+id/text_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="--- Python courses ---"
-        android:textColor="@color/white"
-        android:textSize="34dp"
+
+    <ImageView
+        android:id="@+id/login_button"
+        android:layout_width="54dp"
+        android:layout_height="50dp"
+        android:src="@drawable/white_door"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.98"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainToolBar"
-        app:layout_constraintVertical_bias="0.102" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/item_list_1"
         android:layout_width="350dp"
-        android:layout_height="550dp"
+        android:layout_height="660dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_1"
+        app:layout_constraintTop_toBottomOf="@+id/mainToolBar"
         app:layout_constraintVertical_bias="0.095" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

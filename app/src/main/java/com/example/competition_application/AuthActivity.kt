@@ -19,12 +19,16 @@ class AuthActivity : AppCompatActivity() {
         regButton.setOnClickListener(){
             val login: String = userLogin.toString().trim()
             val pass: String = userPass.toString().trim()
-            var ar =  arrayOf(3)
+            var ar =  ByteArray(3)
             if(login == "" || pass == ""){
                 Toast.makeText(this,"Необходимо заполнить все поля",Toast.LENGTH_SHORT).show()
 
             }else{
-                val newUser =  UserInfo(0, login, pass.toInt(), ar )
+                val newUser =  UserInfo(login, pass.toInt(), ar )
+                val db = DBHELPER(this,null)
+
+                db.addUser(newUser)
+
 
             }
 
