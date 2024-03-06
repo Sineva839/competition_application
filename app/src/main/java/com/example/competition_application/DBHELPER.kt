@@ -46,21 +46,24 @@ class DBHELPER(val context: Context, val factory: SQLiteDatabase.CursorFactory?)
         db.close()
     }
     fun checkUser(): Boolean {
-        var db = this.readableDatabase
-        var result = db.rawQuery("SELECT * FROM user WHERE id = '1'",null)
+        val db = this.readableDatabase
+        val result = db.rawQuery("SELECT * FROM user WHERE login = '*'",null)
         return result.moveToFirst()
     }
 
     fun checkCourse(id: Int): Boolean {
-        var db = this.readableDatabase
-        var result = db.rawQuery("SELECT * FROM courses WHERE c_id = '$id'",null)
+        val db = this.readableDatabase
+        val result = db.rawQuery("SELECT * FROM courses WHERE c_id = '$id'",null)
         return result.moveToFirst()
     }
 
-    fun updateFunc(contex: Context , items: ArrayList<ItemCls>){
-        val db = DBHELPER(context,null)
-        if(db.checkUser()) for (i in items){
-            i.access_valid = db.checkCourse(i.id)
+   fun updateFunc(items: ArrayList<ItemCls>) {
+        val db = DBHELPER(context, factory)
+
+        if (db.checkUser()) {
+            for (i in items) {
+                i.access_valid = db.checkCourse(i.id)
+            }
         }
     }
 

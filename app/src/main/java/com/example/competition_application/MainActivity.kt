@@ -49,11 +49,7 @@ class MainActivity : AppCompatActivity() {
         //db.updateFunc(this,items)
 
         //Toast.makeText(this,"Hello world",Toast.LENGTH_SHORT).show()
-        val db = DBHELPER(this,null)
-        if(db.checkUser()) for (i in items){
-            i.access_valid = db.checkCourse(i.id)
-            Toast.makeText(this,"Открыт курс ${i.id}",Toast.LENGTH_SHORT).show()
-        }
+
 
         itemList.layoutManager = LinearLayoutManager(this)
         itemList.adapter = ItemAdapter(items,this)
