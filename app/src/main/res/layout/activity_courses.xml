@@ -71,18 +71,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Курс пайтон разработчика Junior"
-                    android:textColor="#cdbea7"
-                    />
+                    android:textColor="#cdbea7" />
 
-
-                <ProgressBar
-                    android:id="@+id/progressBar1"
-                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginTop="15dp"
-                    android:progressTint="#c29545" />
             </LinearLayout>
         </LinearLayout>
 
@@ -124,17 +114,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Курс пайтон разработчика Midle"
-                    android:textColor="#cdbea7"
-                   />
+                    android:textColor="#cdbea7" />
 
-                <ProgressBar
-                    android:id="@+id/progressBar2"
-                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginTop="15dp"
-                    android:progressTint="#c29545" />
             </LinearLayout>
         </LinearLayout>
 
@@ -176,19 +157,98 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Курс пайтон разработчика Senior"
-                    android:textColor="#cdbea7"
-                    />
+                    android:textColor="#cdbea7" />
 
-                <ProgressBar
-                    android:id="@+id/progressBar3"
-                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                    android:layout_width="200dp"
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/four_cours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="7dp"
+            android:background="@drawable/custom_background_0"
+            android:orientation="horizontal"
+            android:paddingVertical="0dp">
+
+            <ImageView
+                android:id="@+id/ico4"
+                android:layout_width="115dp"
+                android:layout_height="100dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="0"
+                android:src="@drawable/senior_pit" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title4"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginTop="15dp"
-                    android:progressTint="#c29545" />
+                    android:layout_marginTop="10dp"
+                    android:text="Senior курс"
+                    android:textColor="#cdbea7"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/description4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Курс пайтон разработчика Senior"
+                    android:textColor="#cdbea7" />
+
             </LinearLayout>
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/five_cours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="7dp"
+            android:background="@drawable/custom_background_0"
+            android:orientation="horizontal"
+            android:paddingVertical="0dp">
+
+            <ImageView
+                android:id="@+id/ico5"
+                android:layout_width="115dp"
+                android:layout_height="100dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="0"
+                android:src="@drawable/senior_pit" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Senior курс"
+                    android:textColor="#cdbea7"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/description5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Курс пайтон разработчика Senior"
+                    android:textColor="#cdbea7" />
+
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
 
 
