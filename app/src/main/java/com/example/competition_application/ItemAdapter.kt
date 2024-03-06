@@ -50,14 +50,19 @@ class ItemAdapter(var items: List<ItemCls>, var context: Context):
         holder.image.setImageResource(imageId)
 
         holder.mainLiner.setOnClickListener(){
-            //Toast.makeText(context,holder.desk.text.toString(),Toast.LENGTH_SHORT).show()
-            val intent = Intent(context,OpenScreen::class.java)
+            if(holder.mainLiner.alpha == 1F) {
+                           //Toast.makeText(context,holder.desk.text.toString(),Toast.LENGTH_SHORT).show()
+                val intent = Intent(context, OpenScreen::class.java)
 
-            intent.putExtra("description_item",items[position].mainDesk)
-            intent.putExtra("title_item",items[position].title)
-            intent.putExtra("img_item",items[position].icos)
+                intent.putExtra("description_item", items[position].mainDesk)
+                intent.putExtra("title_item", items[position].title)
+                intent.putExtra("img_item", items[position].icos)
 
-            context.startActivity(intent)
+                context.startActivity(intent)
+            }else{
+                Toast.makeText(context,"Этот курс не доступен вам!",Toast.LENGTH_SHORT).show()
+
+            }
         }
 
     }

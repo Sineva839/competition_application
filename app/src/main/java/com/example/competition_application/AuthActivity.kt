@@ -19,7 +19,8 @@ class AuthActivity : AppCompatActivity() {
         regButton.setOnClickListener(){
             val login: String = userLogin.toString().trim()
             val pass: String = userPass.toString().trim()
-            var ar =  ByteArray(3)
+            var ar =  byteArrayOf(1)
+
             if(login == "" || pass == ""){
                 Toast.makeText(this,"Необходимо заполнить все поля",Toast.LENGTH_SHORT).show()
 

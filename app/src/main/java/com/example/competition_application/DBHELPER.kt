@@ -2,6 +2,7 @@ package com.example.competition_application
 
 import android.content.ContentValues
 import android.content.Context
+import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.widget.TableLayout
@@ -24,8 +25,10 @@ class DBHELPER(val context: Context, val factory: SQLiteDatabase.CursorFactory?)
         values.put("pass",user.password)
         values.put("course",user.courses)
 
+
         val db = this.writableDatabase
         db.insert("user",null,values)
+        context.startActivity(Intent(context,MainActivity::class.java))
         db.close()
 
     }
