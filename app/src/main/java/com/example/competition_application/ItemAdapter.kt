@@ -50,8 +50,7 @@ class ItemAdapter(var items: List<ItemCls>, var context: Context):
         holder.image.setImageResource(imageId)
 
         holder.mainLiner.setOnClickListener(){
-            if(holder.mainLiner.alpha == 1F) {
-                           //Toast.makeText(context,holder.desk.text.toString(),Toast.LENGTH_SHORT).show()
+            if(items[position].access_valid) {
                 val intent = Intent(context, OpenScreen::class.java)
 
                 intent.putExtra("description_item", items[position].mainDesk)

@@ -12,27 +12,25 @@ class AuthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auth)
 
+
+
         val userLogin: EditText = findViewById(R.id.login)
         val userPass: EditText = findViewById(R.id.pass)
         val regButton: View = findViewById(R.id.reg_button)
 
         regButton.setOnClickListener(){
-            val login: String = userLogin.toString().trim()
-            val pass: String = userPass.toString().trim()
-            var ar =  byteArrayOf(1)
-
-            if(login == "" || pass == ""){
-                Toast.makeText(this,"Необходимо заполнить все поля",Toast.LENGTH_SHORT).show()
-
-            }else{
-                val newUser =  UserInfo(login, pass.toInt(), ar )
+            val login: String = userLogin.text.toString()
+            val pass: String = userPass.text.toString()
+            if(login != "" || pass != "") {
+                val newUser = UserInfo(login,pass.toInt())
                 val db = DBHELPER(this,null)
-
                 db.addUser(newUser)
+                db.addCourse("first_cours",1)
 
 
-            }
+                //Toast.makeText(this, "Login: ${db.checkUser(login)} , Pass: $pass", Toast.LENGTH_SHORT).show()
 
+            }else{  Toast.makeText(this, "Данные введены не все", Toast.LENGTH_SHORT).show()}
         }
     }
 }
