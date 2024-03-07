@@ -27,6 +27,9 @@ class MainActivity : AppCompatActivity() {
             editor.apply()
         }
 
+        val paidOn = intent.getStringExtra("paid")
+
+
         val jun_course: LinearLayout = findViewById(R.id.cours1)
         jun_course.alpha = DBAcc.getFloat("id1",0.5f)
         val mid_course: LinearLayout = findViewById(R.id.cours2)
@@ -34,50 +37,57 @@ class MainActivity : AppCompatActivity() {
         val sen_course: LinearLayout = findViewById(R.id.cours3)
         sen_course.alpha = DBAcc.getFloat("id3",0.5f)
 
-        val course1 = arrayListOf<String>("Начало верстки","Вы научитись верстать","simple_pit")
-        val course2 = arrayListOf<String>("Изучаем ООП","Вы поймете что такое ООП","simple_pit")
-        val course3 = arrayListOf<String>("Делаем первый проект","Вы научитись проектированию","simple_pit")
-        val course4 = arrayListOf<String>("Почти конец","Вы научитись терпеть конец обработки","simple_pit")
-        val course5 = arrayListOf<String>("Конец страданий","Вы научитись пушить в мастер без комитов","simple_pit")
+        val listItems1 = arrayListOf<ItemCls>()
+        listItems1.add(ItemCls(1,"Разраб1","Краткое описание","большое описание","задание"))
+        listItems1.add(ItemCls(2,"Разраб2","Краткое описание","большое описание","задание"))
+        listItems1.add(ItemCls(3,"Разраб3","Краткое описание","большое описание","задание"))
+        listItems1.add(ItemCls(4,"Разраб4","Краткое описание","большое описание","задание"))
+        listItems1.add(ItemCls(5,"Разраб5","Краткое описание","большое описание","задание"))
 
-        val list = arrayListOf<ArrayList<String>>(course1,course2,course3,course4,course5)
+        val listItems2 = arrayListOf<ItemCls>()
+        listItems1.add(ItemCls(1,"Разраб1","Краткое описание","большое описание","задание"))
+        listItems1.add(ItemCls(2,"Разраб2","Краткое описание","большое описание","задание"))
+        listItems1.add(ItemCls(3,"Разраб3","Краткое описание","большое описание","задание"))
+        listItems1.add(ItemCls(4,"Разраб4","Краткое описание","большое описание","задание"))
+        listItems1.add(ItemCls(5,"Разраб5","Краткое описание","большое описание","задание"))
 
-        val course1a = arrayListOf<String>("Начало верстки","Вы научитись верстать","midle_pit")
-        val course2a = arrayListOf<String>("Изучаем ООП","Вы поймете что такое ООП","senior_pit")
-        val course3a = arrayListOf<String>("Делаем первый проект","Вы научитись проектированию","midle_pit")
-        val course4a = arrayListOf<String>("Почти конец","Вы научитись терпеть конец обработки","senior_pit")
-        val course5a = arrayListOf<String>("Конец страданий","Вы научитись пушить в мастер без комитов","senior_pit")
+        val titleList = arrayOf<String>("Разраб1","Разраб2","Разраб3","Разраб4","Разраб5",)
+        val descriptionList = arrayOf<String>("Краткое описание","Краткое описание","Краткое описание","Краткое описание","Краткое описание",)
 
-        val list_a = arrayListOf<ArrayList<String>>(course1a,course2a,course3a,course4a,course5a)
 
         jun_course.setOnClickListener(){
             if(jun_course.alpha == 1f){
                 val form = Intent(this, coursesActivity::class.java)
-                form.putExtra("jun",list)
+                form.putExtra("set_list_title",titleList)
+                form.putExtra("set_list_desc",descriptionList)
                 this.startActivity(form)
-            }else {
-                val an_form = Intent(this, buy_Activity::class.java)
-                this.startActivity(an_form)
+            }else{
+                val form = Intent(this, buy_Activity::class.java)
+                form.putExtra("setlist",listItems1)
+                this.startActivity(form)
             }
+
         }
         mid_course.setOnClickListener(){
-            if(jun_course.alpha == 1f){
+            if(mid_course.alpha == 1f){
                 val form = Intent(this, coursesActivity::class.java)
-                form.putExtra("mid",list_a)
+                form.putExtra("setlist",listItems2)
                 this.startActivity(form)
-            }else {
-                val an_form = Intent(this, buy_Activity::class.java)
-                this.startActivity(an_form)
+            }else{
+                val form = Intent(this, buy_Activity::class.java)
+                form.putExtra("setlist",listItems2)
+                this.startActivity(form)
             }
         }
         sen_course.setOnClickListener(){
-            if(jun_course.alpha == 1f){
+            if(sen_course.alpha == 1f){
                 val form = Intent(this, coursesActivity::class.java)
-                form.putExtra("sen",list_a)
+                form.putExtra("setlist",listItems2)
                 this.startActivity(form)
-            }else {
-                val an_form = Intent(this, buy_Activity::class.java)
-                this.startActivity(an_form)
+            }else{
+                val form = Intent(this, buy_Activity::class.java)
+                form.putExtra("setlist",listItems2)
+                this.startActivity(form)
             }
         }
 
