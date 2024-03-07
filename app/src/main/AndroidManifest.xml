@@ -17,6 +17,12 @@
         android:theme="@style/Base.Theme.Competition_application"
         tools:targetApi="31">
         <activity
+            android:name=".card_paid_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".buy_Activity"
+            android:exported="false" />
+        <activity
             android:name=".coursesActivity"
             android:exported="false" />
         <activity
